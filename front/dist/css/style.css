@@ -1,0 +1,118 @@
+body {
+    background-color: rgb(255, 240, 218);
+}
+
+header {
+    background-color: rgb(255, 169, 49);
+    min-height: 100px;
+}
+
+.logo {
+    width: auto;
+}
+
+/* En desktop el logo vuelve a tener el ancho original */
+@media (min-width: 768px) {
+    .logo {
+        width: 10%;
+    }
+
+    header {
+        height: 100px;
+        flex-wrap: nowrap !important;
+    }
+
+    .header-links {
+        width: 20%;
+    }
+}
+
+.logo-img {
+    max-width: 40px;
+}
+
+@media (min-width: 768px) {
+    .logo-img {
+        max-width: 40%;
+    }
+}
+
+/* ── HERO ── */
+#hero {
+    background-color: rgb(251, 202, 134);
+    min-height: 400px;
+}
+
+@media (min-width: 768px) {
+    #hero {
+        height: 700px;
+        min-height: unset;
+    }
+}
+
+#hero h1, #hero h2, .recommended, .description h1, .description p {
+    font-family: Garamond, serif;
+}
+
+.hero-image {
+    background-image: url("../assets/hero-img.png");
+    background-position: center;
+    background-size: cover;
+    width: 90%;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .hero-image {
+        width: 40%;
+    }
+}
+
+/* ── BOTÓN HERO ── */
+.hero-image button {
+    background-color: #FFAA33;
+    font-family: 'Georgia', serif;
+}
+
+/* ── BOTÓN "SEE MORE" sección colección ── */
+.button {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .button {
+        width: 40%;
+    }
+}
+
+.button button {
+    background-color: #FFAA33;
+    font-family: 'Georgia', serif;
+}
+
+/* ── RECOMMENDED ── */
+.recommended-inner {
+    margin: 30px 0;
+}
+
+@media (min-width: 768px) {
+    .recommended-inner {
+        margin: 100px;
+    }
+}
+
+/* ── SCROLL CAROUSEL ── */
+#scrollContainer img {
+    transition: transform 0.3s ease;
+    transform: scale(0.9);
+    opacity: 0.6;
+}
+
+#scrollContainer img.active-book {
+    transform: scale(1.15);
+    opacity: 1;
+    z-index: 10;
+}

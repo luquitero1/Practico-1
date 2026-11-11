@@ -1,9 +1,3 @@
-# Glosario de datos
-
-Biblioteca Virtual **E-Book** — Práctico 2
-
-Se respeta la estructura del modelo del docente: nombre de la entidad, tipo de entidad (Maestra o Subordinada, indicando de qué entidad sale la foránea), descripción y los datos con su tipo.
-
 **entidad: rol**
 
 - Tipo entidad: Maestra

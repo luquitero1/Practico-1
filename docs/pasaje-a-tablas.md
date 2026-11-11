@@ -1,11 +1,3 @@
-# Pasaje a tablas
-
-Biblioteca Virtual **E-Book** — Práctico 2
-
-Pasaje del [MER](MER.md) al modelo relacional. La base implementada está en [`api/config/init.sql`](../api/config/init.sql).
-
-Notación: la **clave primaria** va en negrita y subrayada, y las claves foráneas llevan **(FK)**.
-
 ## Tablas
 
 - rol (<ins>**id_rol**</ins>, nombre_rol)

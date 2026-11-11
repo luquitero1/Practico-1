@@ -1,8 +1,3 @@
-# Modelo Entidad-Relación (MER)
-
-Biblioteca Virtual **E-Book** — Práctico 2
-
-El diagrama está escrito en Mermaid, por lo que GitHub lo dibuja directamente al abrir este archivo.
 
 ```mermaid
 erDiagram

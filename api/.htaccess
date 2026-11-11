@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# El único archivo de /api/ al que se puede entrar es index.php
+# (así .env, init.sql y el código quedan ocultos).
+RewriteRule ^index\.php$ - [END]
+RewriteRule ^ index.php [END]

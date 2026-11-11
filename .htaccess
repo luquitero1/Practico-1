@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Solo se puede acceder a la landing, al front y a la API;
+# cualquier otra cosa (docs, .env, docker-compose.yml, .git, etc.) responde 404.
+RewriteCond %{REQUEST_URI} !^/(index\.html)?$
+RewriteCond %{REQUEST_URI} !^/(api|front)(/|$)
+RewriteRule ^ - [R=404,L]

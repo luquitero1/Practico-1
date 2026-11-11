@@ -1,0 +1,42 @@
+# Los valores ${...} se leen del archivo .env de la raíz (ver .env.example).
+services:
+
+  # Sitio (Apache + PHP): http://localhost:8080
+  # PHP lee las credenciales de la base desde api/.env (ver api/.env.example).
+  app:
+    build: .
+    container_name: ${APP_NAME}_app
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      - db
+
+  # Base de datos. La primera vez que arranca ejecuta api/config/init.sql.
+  db:
+    image: mariadb:11
+    container_name: ${APP_NAME}_db
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASS}
+      MARIADB_DATABASE: ${DB_NAME}
+      MARIADB_USER: ${DB_USER}
+      MARIADB_PASSWORD: ${DB_PASS}
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./api/config/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  # phpMyAdmin para ver la base: http://localhost:8081  (usuario root, clave DB_ROOT_PASS del .env)
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: ${APP_NAME}_phpmyadmin
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+    depends_on:
+      - db
+
+volumes:
+  db_data:

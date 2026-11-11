@@ -1,0 +1,17 @@
+.auth-body {
+    background-color: rgb(251, 202, 134);
+    min-height: 100vh;
+    font-family: Garamond, 'Georgia', serif;
+}
+
+.auth-card {
+    background-color: rgb(255, 240, 218);
+    border: none;
+    border-top: 8px solid rgb(255, 169, 49);
+    max-width: 420px;
+}
+
+.btn-auth {
+    background-color: #FFAA33;
+    color: #fff;
+}

@@ -1,0 +1,23 @@
+.dash-body {
+    background-color: #f3f4f6;
+    font-family: system-ui, sans-serif;
+}
+
+.dash-sidebar {
+    background-color: #2b1d0e;
+}
+
+.dash-sidebar .nav-link {
+    color: #f5e6d0;
+}
+
+.dash-sidebar .nav-link.active {
+    background-color: #FFAA33;
+    color: #2b1d0e;
+}
+
+@media (min-width: 992px) {
+    .dash-sidebar {
+        min-height: 100vh;
+    }
+}

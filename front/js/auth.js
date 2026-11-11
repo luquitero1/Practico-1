@@ -33,5 +33,5 @@ async function protegerPagina(rolPermitido) {
 
 async function cerrarSesion() {
     await fetch('/api/logout', { method: 'POST' });
-    window.location.replace('/');
+    window.location.replace('/front/');
 }

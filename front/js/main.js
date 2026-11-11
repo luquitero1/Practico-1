@@ -1,4 +1,4 @@
-const CARPETA_IMAGENES = "front/dist/assets/";
+const CARPETA_IMAGENES = "/front/dist/assets/";
 
 let books = [];
 
@@ -79,7 +79,7 @@ function cargarGrilla() {
 }
 
 async function cargarLibros() {
-    const respuesta = await fetch('api/libros');
+    const respuesta = await fetch("/api/libros");
     const data = await respuesta.json();
     books = data.libros;
 
